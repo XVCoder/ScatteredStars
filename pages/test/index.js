@@ -8,6 +8,8 @@ Page({
     Slogan: [],
     //描述性文字
     Description: [],
+    //图片集
+    ImageInfos: [],
     //小程序APPId
     AppId: [],
   },
@@ -27,14 +29,25 @@ Page({
       content: ['电话：1234-12345678', '时间：工作日 周一到周五、8:30-17:30', '邮箱：12345678@163.com']
     }, {
       title: '',
-      content: ['网络出版服务许可证（总）网出证（湘）字第000号', '增值电信业务经营许可证','XXX号']
+      content: ['网络出版服务许可证（总）网出证（湘）字第000号', '增值电信业务经营许可证', 'XXX号']
     }];
     var appId = 'wx62dce4ce042030bf';
     var thumbnail = 'http://5b0988e595225.cdn.sohucs.com/images/20180110/a7e2d504354c479785728cc1fb399ab8.jpeg';
+    var imageInfos = [{
+      name: '加载页面',
+      imageUrl: 'http://7.pic.pc6.com/thumb/up/2017-4/20174218352346506849_600_566.png'
+    }, {
+      name: '登录页面',
+      imageUrl: 'http://0.pic.pc6.com/thumb/up/2017-4/20174218352383032072_600_566.jpg'
+    }, {
+      name: '操作页面',
+      imageUrl: 'http://6.pic.pc6.com/thumb/up/2017-4/20174218352312158078_600_566.png'
+    }];
     that.setData({
       Thumbnail: thumbnail,
       Slogan: slogan,
       Description: description,
+      ImageInfos: imageInfos,
       AppId: appId,
     })
   },
@@ -45,5 +58,18 @@ Page({
   //用户点击右上角分享
   onShareAppMessage: function() {
 
+  },
+  //预览图片
+  Preview: function(option) {
+    var that = this;
+    let imageUrls = [];
+    for (var i = 0; i < that.data.ImageInfos.length; i++) {
+      imageUrls.push(that.data.ImageInfos[i].imageUrl);
+    }
+    //预览图片
+    wx.previewImage({
+      current: option.currentTarget.dataset.url, // 当前显示图片的http链接
+      urls: imageUrls, // 需要预览的图片http链接列表
+    });
   }
 })

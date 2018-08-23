@@ -26,7 +26,7 @@ page {
   color: #414141;
 }
 
-.item{
+.description-item {
   margin-bottom: 50rpx;
 }
 
@@ -47,8 +47,13 @@ page {
   margin-bottom: 10rpx;
 }
 
-.links{
+.images {
+  margin-bottom: 30rpx;
+}
+
+.links {
+  margin-top: 30rpx;
   margin-bottom: 5rpx;
-  color:#1DB1E3;
+  color: #1db1e3;
   text-align: center;
 }

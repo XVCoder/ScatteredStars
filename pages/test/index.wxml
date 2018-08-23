@@ -5,10 +5,16 @@
   </view>
 </view>
 <view class='description'>
-  <view wx:for='{{Description}}' wx:for-index='index' wx:for-item='item' class='item'>
+  <view wx:for='{{Description}}' wx:key='id' wx:for-index='index' wx:for-item='item' class='description-item'>
     <text class='title'>{{item.title}}</text>
-    <text wx:for='{{item.content}}' wx:for-index='index1' wx:for-item='item1' decode='{{true}}'>{{item1}}
+    <text wx:for='{{item.content}}' wx:key='id1' wx:for-index='index1' wx:for-item='item1' decode='{{true}}'>{{item1}}
     </text>
+  </view>
+  <view wx:for='{{ImageInfos}}' wx:key='id2' wx:for-index='index2' wx:for-item='item2'>
+    <view class='images'>
+      <image style="width:100%" mode='widthFix' src="{{item2.imageUrl}}" bindtap='Preview' data-url="{{item2.imageUrl}}"></image>
+      <view style='font-size:30rpx;color:gray;text-align:center'>{{item2.name}}</view>
+    </view>
   </view>
   <view class='links'>
     <navigator target='miniProgram' open-type='navigate' app-id='{{AppId}}' path='' extra-data='' version='release'>体验一下</navigator>
