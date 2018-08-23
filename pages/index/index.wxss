@@ -1,0 +1,44 @@
+page {
+  overflow: hidden;
+  position: fixed;
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534768423275&di=8e47f7c2519b915a6d0deb9d8adce4eb&imgtype=0&src=http%3A%2F%2Fi3.bbs.fd.zol-img.com.cn%2Fg5%2FM00%2F07%2F0D%2FChMkJlm3I5iIXsAsAAIlcN52egsAAgaXwBkm-MAAiWI993.jpg');
+  margin: 0px;
+  /*下面的是关键的设置100%显示*/
+  background-size: 100% 100%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo image {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border: 1px white;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 3px rgba(34, 25, 25, 0.5);
+}
+
+.userinfo text {
+  font-size: 30rpx;
+  color: white;
+}
+
+.bottom {
+  /* margin-top: 60%; */
+  position: fixed;
+  bottom: 150rpx;
+  left: 280rpx;
+}
+
+.bottom button {
+  width: 180rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}

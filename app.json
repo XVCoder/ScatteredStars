@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#20313B",
+    "navigationBarTitleText": "散作繁星",
+    "navigationBarTextStyle": "white"
+  }
+}
