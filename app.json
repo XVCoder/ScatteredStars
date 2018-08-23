@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/test/index",
     "pages/index/index",
     "pages/main/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "#fff",

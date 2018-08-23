@@ -1,1 +1,3 @@
-/* pages/main/index.wxss */
+.container{
+  padding: 10rpx;
+}
