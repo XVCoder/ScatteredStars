@@ -4,17 +4,23 @@
     <text>{{item}}</text>
   </view>
 </view>
-<view class='description'>
-  <view wx:for='{{Description}}' wx:key='id' wx:for-index='index' wx:for-item='item' class='description-item'>
-    <text class='title'>{{item.title}}</text>
-    <text wx:for='{{item.content}}' wx:key='id1' wx:for-index='index1' wx:for-item='item1' decode='{{true}}'>{{item1}}
-    </text>
-  </view>
-  <view wx:for='{{ImageInfos}}' wx:key='id2' wx:for-index='index2' wx:for-item='item2'>
-    <view class='images'>
-      <image style="width:100%" mode='widthFix' src="{{item2.imageUrl}}" bindtap='Preview' data-url="{{item2.imageUrl}}"></image>
-      <view style='font-size:30rpx;color:gray;text-align:center'>{{item2.name}}</view>
+<view class='descriptions'>
+  <view wx:for='{{Descriptions}}' wx:key='id' wx:for-index='index' wx:for-item='item' class='descriptions-item'>
+    <view hidden="{{item.title==''?true:false}}">
+      <text class='title' style='background-color:{{ItemTitleBackColor[index]}}'>{{item.title}}</text>
     </view>
+    <view class='content' hidden="{{item.content==''?true:false}}">
+      <text decode='{{true}}'>{{item.content}}</text>
+    </view>
+    <view wx:for='{{item.imageInfos}}' wx:key='id2' wx:for-index='index2' wx:for-item='item2'>
+      <view>
+        <image class='image-item' style="width:100%" mode='widthFix' src="{{item2.imageUrl}}" bindtap='Preview' data-url="{{item2.imageUrl}}"></image>
+        <view class='image-name' hidden="{{item2.name==''?true:false}}">{{item2.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image class='qrcode' src='{{QRCode}}' hidden="{{QRCode==''?true:false}}"></image>
   </view>
   <view class='links'>
     <navigator target='miniProgram' open-type='navigate' app-id='{{AppId}}' path='' extra-data='' version='release'>体验一下</navigator>

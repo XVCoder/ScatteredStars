@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/test/index",
     "pages/index/index",
-    "pages/main/index"
-    
+    "pages/main/index",
+    "pages/test/index",
+    "pages/about/index"
   ],
   "window": {
     "backgroundTextStyle": "#fff",
     "navigationBarBackgroundColor": "#20313B",
     "navigationBarTitleText": "散作繁星",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F5F5F5",
+    "enablePullDownRefresh": true
   }
 }

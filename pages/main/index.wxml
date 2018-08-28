@@ -1,5 +1,27 @@
-<view class='container'>
-  <view>
-    测试
-  </view>
+<wxs src="./../tools.wxs" module="tools" />
+<view class='top-bar'>
+  <text>{{currentTab==0?'Writing':'Reading'}}</text>
 </view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 33}}px" bindchange="bindChange">
+  <!-- WritingPage -->
+  <swiper-item>
+    <view class='page'>
+      <view wx:for='{{MyDiaryList}}' wx:key='id' wx:for-index='index' wx:for-item='item' data-currentTab='0' data-id='item.id' bindtap='ClickItem'>
+        <view class='item-content'>{{item.content}}
+          <view class='item-createdtime'>{{item.createdTime}}</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- ReadingPage -->
+  <swiper-item>
+    <view class='page'>
+      <view wx:for='{{AnonymousDiaryList}}' wx:key='id' wx:for-index='index' wx:for-item='item' data-currentTab='0' data-id='item.id' bindtap='ClickItem'>
+        <view class='item-content'>{{item.content}}
+          <view class='item-createdtime'>{{item.createdTime}}</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

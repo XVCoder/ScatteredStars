@@ -1,0 +1,9 @@
+var foo = "'hello world' from tools.wxs";
+var substring = function(str, startIndex, length) {
+  return str.substring(startIndex, length);
+}
+module.exports = {
+  FOO: foo,
+  substring: substring,
+};
+module.exports.msg = "some msg";

@@ -26,13 +26,9 @@ page {
   color: #414141;
 }
 
-.description-item {
-  margin-bottom: 50rpx;
-}
-
-.description {
+.descriptions {
   margin-top: 10rpx;
-  padding: 25rpx;
+  padding: 5rpx;
   padding-bottom: 60rpx;
   float: right;
   font-size: 25rpx;
@@ -40,15 +36,42 @@ page {
   background-color: white;
 }
 
-.title {
-  font-size: 28rpx;
-  color: dimgray;
-  display: block;
-  margin-bottom: 10rpx;
+.descriptions-item {
+  margin-bottom: 5rpx;
 }
 
-.images {
-  margin-bottom: 30rpx;
+.title {
+  font-size: 30rpx;
+  color: white;
+  display: block;
+  padding: 20rpx;
+  padding-left: 25rpx;
+  margin-bottom: 5rpx;
+}
+
+.content {
+  padding: 10rpx 20rpx 15rpx 20rpx;
+  background-color: aliceblue;
+}
+
+.image-item {
+  margin-top: 5rpx;
+}
+
+.image-name {
+  font-size: 25rpx;
+  color: gray;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.qrcode {
+  clear: both;
+  display: block;
+  margin: auto;
+  margin-top: 60rpx;
+  width: 300rpx;
+  height: 300rpx;
 }
 
 .links {

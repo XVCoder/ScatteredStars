@@ -7,9 +7,13 @@ Page({
     //标语
     Slogan: [],
     //描述性文字
-    Description: [],
-    //图片集
-    ImageInfos: [],
+    Descriptions: [],
+    //详情说明文字标题的背景色
+    ItemTitleBackColor: [],
+    //图片链接
+    ImageUrls: [],
+    //二维码
+    QRCode: '',
     //小程序APPId
     AppId: [],
   },
@@ -20,34 +24,111 @@ Page({
     wx.setNavigationBarTitle({
       title: '关于亿发批零软件',
     })
+    var thumbnail = 'http://yifarj.com/statics/yf/images/logo.jpg';
     var slogan = ['专为批零企业量身定制的便捷型管理软件', '能充分满足批零企业的“全方位销售一体化”需求', '功能多达200余项，共五个版本'];
-    var description = [{
-      title: '简介',
-      content: ['&nbsp;&nbsp;&nbsp;&nbsp;亿发智能批零管理软件(以下简称亿发软件)是专为批零企业量身定制的便捷型管理软件，能充分满足批零企业的“全方位销售一体化”需求，通过一个系统将订单、商品、客户、库存、资金、支付等信息统一处理;\n&nbsp;&nbsp;&nbsp;&nbsp;同一系统，功能多达200余项的亿发智能批零管理软件，现开发有基础版、超级版、集团版，其中超级版、集团版可根据需求综合选择PC、PDA、POS、PAD、手机等操作终端，以得到最完美的销售与管理模式。']
+    var descriptions = [{
+      title: '亿发智能批零管理软件',
+      content: ['1、专为批零商企量身定制的移动进销存管理软件。\n2、移动开单、移动送货、移动收款，PDA、手机均可无线打印，并可实现无线远程打印。\n3、实现手机管店，可实时查询销售单、货品、经营状况、库存数量、客户往来账务等数据。让老板身处何地都能一“手”掌控。\n4、支持PC电脑、PDA移动掌上电脑、POS收银机、Pad、手机（安卓/苹果）等多种终端，多种终端可任意组合，方便销售人员随时随地开单、查货、打印、盘点等。\n5、支持一键生成微店，客户可在线选购货品、下单、支付等。\n6、亿订货功能：批发客户用App自主选货、下单、支付等，只能看到自己的拿货价；订货会可用：订货会期间执行优惠价格，不做记忆，收银台自动结算账款。\n7、支持本地服务或阿里云服务器，三层数据安全防护体系，确保数据安全。'],
+      imageInfos: [{
+        name: 'xxxxxxxx',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201610/198/scx30045vxd.jpg'
+      }]
     }, {
-      title: '合作联系',
-      content: ['电话：1234-12345678', '时间：工作日 周一到周五、8:30-17:30', '邮箱：12345678@163.com']
+      title: '适用于',
+      content: ['文体、日用百货、视频、玩具、酒店用品、五金、建材、茶叶、医疗器械、服装鞋帽、家电、母婴、冷链等各行各业的批发和零售企业、商贸公司、连锁企业、商超、直营店、个体店等\n多仓库管理，多店管理，多异地销售的中大型商企'],
+      imageInfos: [{
+        name: 'xxxxxxxx',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201610/198/jnrqtcnyywt.jpg'
+      }, {
+        name: 'xxxxxxxx',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201707/115/51.jpg'
+      }]
+    }, {
+      title: '测试',
+      content: ['1、专为批零商企量身定制的移动进销存管理软件。\n2、移动开单、移动送货、移动收款，PDA、手机均可无线打印，并可实现无线远程打印。\n3、实现手机管店，可实时查询销售单、货品、经营状况、库存数量、客户往来账务等数据。让老板身处何地都能一“手”掌控。\n4、支持PC电脑、PDA移动掌上电脑、POS收银机、Pad、手机（安卓/苹果）等多种终端，多种终端可任意组合，方便销售人员随时随地开单、查货、打印、盘点等。\n5、支持一键生成微店，客户可在线选购货品、下单、支付等。\n6、亿订货功能：批发客户用App自主选货、下单、支付等，只能看到自己的拿货价；订货会可用：订货会期间执行优惠价格，不做记忆，收银台自动结算账款。\n7、支持本地服务或阿里云服务器，三层数据安全防护体系，确保数据安全。'],
+      imageInfos: []
     }, {
       title: '',
-      content: ['网络出版服务许可证（总）网出证（湘）字第000号', '增值电信业务经营许可证', 'XXX号']
-    }];
+      content: ['1、专为批零商企量身定制的移动进销存管理软件。\n2、移动开单、移动送货、移动收款，PDA、手机均可无线打印，并可实现无线远程打印。\n3、实现手机管店，可实时查询销售单、货品、经营状况、库存数量、客户往来账务等数据。让老板身处何地都能一“手”掌控。\n4、支持PC电脑、PDA移动掌上电脑、POS收银机、Pad、手机（安卓/苹果）等多种终端，多种终端可任意组合，方便销售人员随时随地开单、查货、打印、盘点等。\n5、支持一键生成微店，客户可在线选购货品、下单、支付等。\n6、亿订货功能：批发客户用App自主选货、下单、支付等，只能看到自己的拿货价；订货会可用：订货会期间执行优惠价格，不做记忆，收银台自动结算账款。\n7、支持本地服务或阿里云服务器，三层数据安全防护体系，确保数据安全。'],
+      imageInfos: [{
+        name: '',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201707/115/52.jpg'
+      }, {
+        name: '',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201707/115/58.jpg'
+      }, {
+        name: '',
+        imageUrl: 'http://t2.hddhhn.com/uploads/tu/201707/200/1.jpg'
+      }]
+    }, {
+      title: '123',
+      content: [],
+      imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }, {
+        title: '123',
+        content: [],
+        imageInfos: []
+      }];
+    let imageUrls = [];
+    for (var i = 0; i < descriptions.length; i++) {
+      for (var j = 0; j < descriptions[i].imageInfos.length; j++) {
+        imageUrls.push(descriptions[i].imageInfos[j].imageUrl);
+      }
+    }
+    var qrCode = 'http://yifarj.com/statics/yf/images/wx.jpg';
     var appId = 'wx62dce4ce042030bf';
-    var thumbnail = 'http://5b0988e595225.cdn.sohucs.com/images/20180110/a7e2d504354c479785728cc1fb399ab8.jpeg';
-    var imageInfos = [{
-      name: '加载页面',
-      imageUrl: 'http://7.pic.pc6.com/thumb/up/2017-4/20174218352346506849_600_566.png'
-    }, {
-      name: '登录页面',
-      imageUrl: 'http://0.pic.pc6.com/thumb/up/2017-4/20174218352383032072_600_566.jpg'
-    }, {
-      name: '操作页面',
-      imageUrl: 'http://6.pic.pc6.com/thumb/up/2017-4/20174218352312158078_600_566.png'
-    }];
+    var colors = ['#00ccff', '#aedd81', '#fad689', '#b5caa0', '#d0d0d0','#eb7347'];
+    let backColors = [];
+    for (var i = 0; i < descriptions.length; i++) {
+      backColors.push(colors[i % colors.length]);
+    }
     that.setData({
       Thumbnail: thumbnail,
       Slogan: slogan,
-      Description: description,
-      ImageInfos: imageInfos,
+      Descriptions: descriptions,
+      ItemTitleBackColor: backColors,
+      ImageUrls: imageUrls,
+      QRCode: qrCode,
       AppId: appId,
     })
   },
@@ -62,14 +143,10 @@ Page({
   //预览图片
   Preview: function(option) {
     var that = this;
-    let imageUrls = [];
-    for (var i = 0; i < that.data.ImageInfos.length; i++) {
-      imageUrls.push(that.data.ImageInfos[i].imageUrl);
-    }
     //预览图片
     wx.previewImage({
       current: option.currentTarget.dataset.url, // 当前显示图片的http链接
-      urls: imageUrls, // 需要预览的图片http链接列表
+      urls: that.data.ImageUrls, // 需要预览的图片http链接列表
     });
   }
 })

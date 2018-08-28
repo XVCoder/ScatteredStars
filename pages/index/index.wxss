@@ -31,14 +31,26 @@ page {
 .bottom {
   /* margin-top: 60%; */
   position: fixed;
-  bottom: 150rpx;
+  bottom: 200rpx;
   left: 280rpx;
 }
 
 .bottom button {
   width: 180rpx;
   height: 80rpx;
+  margin-bottom: 80rpx;
   font-size: 30rpx;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.about {
+  font-size: 20rpx;
+  /* position: fixed;
+  bottom: 80rpx; */
+  color: whitesmoke;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }

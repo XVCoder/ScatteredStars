@@ -53,5 +53,10 @@ Page({
     wx.navigateTo({
       url: '../main/index',
     })
+  },
+  About:function(){
+    wx.navigateTo({
+      url: '../about/index',
+    })
   }
 })

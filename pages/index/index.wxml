@@ -7,4 +7,5 @@
 </view>
 <view class='bottom'>
   <button bindtap='Entrance'>点击开启</button>
+  <view class='about' bindtap='About'>关于散作繁星</view>
 </view>
