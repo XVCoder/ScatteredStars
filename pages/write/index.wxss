@@ -1,0 +1,38 @@
+page {
+  padding: 20rpx;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 10rpx 0rpx 10rpx 0rpx;
+  border-top: 1px solid #e7e7eb;
+  height: 60rpx;
+  width: 100%;
+}
+
+.cancel {
+  float: left;
+  width: 25%;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background-color: tomato;
+  color: #fafdfa;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: 20%;
+}
+
+.save {
+  float: right;
+  width: 25%;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background-color: forestgreen;
+  color: #fafdfa;
+  text-align: center;
+  line-height: 60rpx;
+  margin-right: 20%;
+}

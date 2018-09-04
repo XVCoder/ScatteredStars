@@ -1,0 +1,7 @@
+<view>
+
+</view>
+<view class='bottom'>
+  <button class='cancel' bindtap='Cancel'>取消</button>
+  <button class='save' bindtap='Save'>保存</button>
+</view>

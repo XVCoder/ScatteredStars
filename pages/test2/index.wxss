@@ -1,0 +1,107 @@
+page {
+  background-color: whitesmoke;
+}
+
+.info {
+  margin-top: 3rpx;
+  position: relative;
+  padding: 40rpx;
+  background-color: white;
+  min-height: 200rpx;
+}
+
+.thumbnail {
+  clear: both;
+  display: block;
+  margin: auto;
+  margin-bottom: 30rpx;
+  width: 180rpx;
+}
+
+.info text {
+  display: flex;
+  margin-bottom: 5rpx;
+  justify-content: center;
+  font-size: 25rpx;
+  color: #414141;
+}
+
+.descriptions {
+  margin-top: 10rpx;
+  padding: 5rpx;
+  padding-bottom: 60rpx;
+  float: right;
+  font-size: 25rpx;
+  color: gray;
+  background-color: white;
+}
+
+.descriptions-item {
+  margin-bottom: 5rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  color: white;
+  display: block;
+  padding: 20rpx;
+  padding-left: 25rpx;
+  margin-bottom: 5rpx;
+}
+
+.content {
+  padding: 10rpx 20rpx 15rpx 20rpx;
+  line-height: 40rpx;
+  background-color: aliceblue;
+}
+
+.image-item {
+  margin-top: 5rpx;
+}
+
+.image-name {
+  font-size: 25rpx;
+  color: gray;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.slogan2 {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  height: 80rpx;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: skyblue;
+}
+
+.slogan2 text {
+  line-height: 80rpx;
+}
+
+.more {
+  margin-left: 20rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+}
+
+.link {
+  color: #1db1e3;
+}
+
+.qrcode {
+  clear: both;
+  display: block;
+  margin: auto;
+  margin-top: 60rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.trylink {
+  margin-top: 30rpx;
+  margin-bottom: 5rpx;
+  color: #1db1e3;
+  text-align: center;
+}
