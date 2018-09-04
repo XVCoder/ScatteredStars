@@ -10,6 +10,8 @@ Page({
     MyDiaryList: [],
     //匿名日记列表
     AnonymousDiaryList: [],
+    //回到顶部
+    toView: 0,
   },
   //加载事件
   onLoad: function(options) {
@@ -35,6 +37,18 @@ Page({
       id: 1,
       content: '这也是一个测试',
       createdTime: util.formatTime(new Date)
+    }, {
+      id: 2,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 3,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 4,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
     }];
     var anonymousDiaryList = [{
       id: 0,
@@ -43,7 +57,27 @@ Page({
     }, {
       id: 1,
       content: '这也是一个测试',
-        createdTime: util.formatTime(new Date)
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 2,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 3,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 4,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 5,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
+    }, {
+      id: 6,
+      content: '这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试',
+      createdTime: util.formatTime(new Date)
     }];
     that.setData({
       MyDiaryList: myDiaryList,
@@ -58,9 +92,9 @@ Page({
   bindChange: function(e) {
     var that = this;
     that.setData({
-      currentTab: e.detail.current
+      currentTab: e.detail.current,
+      toView: 0
     });
-
   },
   //点击tab切换
   switchNav: function(e) {
@@ -75,6 +109,14 @@ Page({
   },
   //点击标题加载详情页
   ClickItem: function(option) {
-
+    wx.navigateTo({
+      url: '../write/index?DiaryId=' + option.currentTarget.dataset.id + '&Content=' + option.currentTarget.dataset.content
+    })
+  },
+  //写日记
+  Write: function(option) {
+    wx.navigateTo({
+      url: '../write/index'
+    })
   }
 })

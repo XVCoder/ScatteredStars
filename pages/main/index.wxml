@@ -6,22 +6,29 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 33}}px" bindchange="bindChange">
   <!-- WritingPage -->
   <swiper-item>
-    <view class='page'>
-      <view wx:for='{{MyDiaryList}}' wx:key='id' wx:for-index='index' wx:for-item='item' data-currentTab='0' data-id='item.id' bindtap='ClickItem'>
-        <view class='item-content'>{{item.content}}
-          <view class='item-createdtime'>{{item.createdTime}}</view>
+    <scroll-view scroll-y="true" style="height: 100%">
+      <view class='displaypage'>
+        <view wx:for='{{MyDiaryList}}' wx:key='id1' wx:for-index='index' wx:for-item='item' data-currentTab='0' data-id='{{item.id}}' data-content='{{item.content}}' bindtap='ClickItem'>
+          <view class='item-content'>{{item.content}}
+            <view class='item-createdtime'>{{item.createdTime}}</view>
+          </view>
+        </view>
+        <view catchtap='Write' class='write'>
+          <image src='../../images/write.png'></image>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </swiper-item>
   <!-- ReadingPage -->
   <swiper-item>
-    <view class='page'>
-      <view wx:for='{{AnonymousDiaryList}}' wx:key='id' wx:for-index='index' wx:for-item='item' data-currentTab='0' data-id='item.id' bindtap='ClickItem'>
-        <view class='item-content'>{{item.content}}
-          <view class='item-createdtime'>{{item.createdTime}}</view>
+    <scroll-view scroll-y="true" style="height: 100%">
+      <view class='displaypage'>
+        <view wx:for='{{AnonymousDiaryList}}' wx:key='id2' wx:for-index='index' wx:for-item='item' data-currentTab='1' data-id='item.id' bindtap='ClickItem'>
+          <view class='item-content'>{{item.content}}
+            <view class='item-createdtime'>{{item.createdTime}}</view>
+          </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </swiper-item>
 </swiper>

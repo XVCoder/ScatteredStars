@@ -30,7 +30,7 @@
   background-color: whitesmoke;
 }
 
-.page {
+.displaypage {
   text-align: center;
   padding: 10rpx;
   font-size: 30rpx;
@@ -46,11 +46,27 @@
   font-size: 28rpx;
   background-color: white;
   border-radius: 10rpx;
-  box-shadow: 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.5);
+  box-shadow: 2rpx 2rpx 2rpx rgba(0, 0, 0, 0.5);
 }
 
 .item-createdtime{
   margin-top: 15rpx;
   font-size: 25rpx;
   color: gainsboro;
+}
+
+.write {
+  position: fixed;
+  bottom: 8%;
+  right: 10%;
+  width: 64px;
+  height: 64px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  border-radius:40px;
+  background-color: white;
+}
+
+.write image {
+  width: 64px;
+  height: 64px;
 }

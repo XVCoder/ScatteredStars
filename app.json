@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/main/index",
+    "pages/test2/index",
     "pages/test/index",
+    "pages/write/index",
+    "pages/main/index",
+    "pages/index/index",
     "pages/about/index"
   ],
   "window": {
@@ -10,7 +12,7 @@
     "navigationBarBackgroundColor": "#20313B",
     "navigationBarTitleText": "散作繁星",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#F5F5F5",
+    "backgroundColor": "#20313B",
     "enablePullDownRefresh": true
   }
 }
