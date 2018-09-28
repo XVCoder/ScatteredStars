@@ -1,0 +1,10 @@
+.list-item {
+  margin-top: 20rpx;
+  text-align: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-indent: 60rpx;
+  font-size: 50rpx;
+  color: white;
+  background-color: lightskyblue;
+}

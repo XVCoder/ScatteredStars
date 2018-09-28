@@ -1,11 +1,21 @@
 {
   "pages": [
+    "pages/charts_test/index",
+    "pages/table_test/index",
+    "pages/animation_test/001",
     "pages/test2/index",
     "pages/test/index",
     "pages/write/index",
     "pages/main/index",
     "pages/index/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/charts_test/area/area",
+    "pages/charts_test/column/column",
+    "pages/charts_test/line/line",
+    "pages/charts_test/pie/pie",
+    "pages/charts_test/radar/radar",
+    "pages/charts_test/ring/ring",
+    "pages/charts_test/scrollline/scrollline"
   ],
   "window": {
     "backgroundTextStyle": "#fff",

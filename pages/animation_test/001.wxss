@@ -1,0 +1,15 @@
+.test001 {
+  position: fixed;
+  width: 500rpx;
+  height: 500rpx;
+  background-color: deepskyblue;
+  bottom: 0rpx;
+  transition: height 2s;
+  -moz-transition: width 2s; /* Firefox 4 */
+  -webkit-transition: width 2s; /* Safari and Chrome */
+  -o-transition: width 2s; /* Opera */
+}
+
+.test001:hover {
+  height: 800rpx;
+}

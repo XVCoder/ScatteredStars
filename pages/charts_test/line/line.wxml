@@ -1,0 +1,37 @@
+<!-- 弹窗选择条件 -->
+<!-- <modal style='height:{{WindowHeight-100}}px' hidden="{{IsModalHidden}}" title="请选择数据源" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <checkbox-group class="checkbox-group" bindchange="ChangeDataSource">
+    <label class="items" wx:for="{{item}}" wx:key="{{index}}">
+      <checkbox value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" /> {{item.name}}
+    </label>
+  </checkbox-group>
+</modal> -->
+
+
+<view class='cover' hidden='true'>
+  <view class='pop-area'>
+    <view class='title-area'>
+      <text>选择数据源</text>
+    </view>
+    <view class='scroll-area'>
+      <scroll-view scroll-y="true">
+        <checkbox-group class="checkbox-group" bindchange="ChangeDataSource">
+          <label class="items" wx:for="{{item}}" wx:key="{{index}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" /> {{item.name}}
+          </label>
+        </checkbox-group>
+      </scroll-view>
+    </view>
+    <view class='button-area'>
+      <button bindtap='Cancel' style='color:salmon'>取消</button>
+      <button bindtap='Confirm' style='color:green'>确定</button>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="container">
+  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  <button type="primary" bindtap="updateData">更新数据</button>
+</view>

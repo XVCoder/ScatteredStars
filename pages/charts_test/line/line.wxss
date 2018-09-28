@@ -1,0 +1,62 @@
+/* pages/charts_test/line/line.wxss */
+
+.items {
+  display: block;
+  margin: 30rpx;
+}
+
+.cover {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+.pop-area {
+  padding: 20rpx;
+  width: 600rpx;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+  color: 30rpx;
+  background-color: white;
+  z-index: 9999;
+}
+
+.title-area {
+  margin-bottom: 20rpx;
+  height: 50rpx;
+  text-align: center;
+}
+
+.title-area text {
+  line-height: 50rpx;
+  font-size: 35rpx;
+  color: dimgray;
+}
+
+.scroll-area {
+  padding: 5rpx;
+  border-top: 2rpx solid whitesmoke;
+  border-bottom: 2rpx solid whitesmoke;
+}
+
+.scroll-area scroll-view{
+  min-height: 300rpx;
+  max-height: 600rpx;
+}
+
+.button-area {
+  margin-top: 10rpx;
+  display: flex;
+}
+
+.button-area button {
+  display: inline-block;
+  width: 220rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+}
