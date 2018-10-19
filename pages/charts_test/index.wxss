@@ -7,4 +7,7 @@
   font-size: 50rpx;
   color: white;
   background-color: lightskyblue;
+  margin-right: 20rpx;
+  border-top-right-radius: 60rpx;
+  border-bottom-right-radius: 60rpx;
 }
