@@ -15,7 +15,8 @@
     "pages/charts_test/pie/pie",
     "pages/charts_test/radar/radar",
     "pages/charts_test/ring/ring",
-    "pages/charts_test/scrollline/scrollline"
+    "pages/charts_test/scrollline/scrollline",
+    "pages/blog/index"
   ],
   "window": {
     "backgroundTextStyle": "#fff",

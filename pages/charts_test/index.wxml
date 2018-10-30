@@ -7,4 +7,5 @@
     <view bindtap="gotoPage" data-page="ring" class="list-item">Ring</view>
     <view bindtap="gotoPage" data-page="area" class="list-item">Area</view>
     <view bindtap="gotoPage" data-page="radar" class="list-item">Radar</view>
+    <view bindtap="gotoBlog" class="list-item">Blog</view>
 </view>

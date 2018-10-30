@@ -8,5 +8,10 @@ Page({
   },
   onLoad: function () {
 
+  },
+  gotoBlog: function(){
+    wx.navigateTo({
+      url: '../blog/index'
+    })
   }
 })
